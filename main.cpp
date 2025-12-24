@@ -18,15 +18,6 @@ using vs  = vector<string>;
 using vpii = vector<pii>;
 using vpll = vector<pll>;
 
-typedef long long ll;
-typedef long double ld;
-typedef pair<int,int> pii;
-typedef pair<ll,ll> pll;
-typedef vector<int> vi;
-typedef vector<ll> vll;
-typedef vector<pii> vpii;
-typedef vector<pll> vpll;
-
 #define fastio() ios::sync_with_stdio(false); cin.tie(nullptr)
 #define pb push_back
 #define all(x) (x).begin(), (x).end()
@@ -82,6 +73,7 @@ int main(){
     }
     return 0;
 }
+
 
 
 
