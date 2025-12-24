@@ -52,60 +52,25 @@ const int MOD = 1e9 + 7;
 ll mod_mul(ll a, ll b, ll m = MOD){ return (a*b)%m; }
 ll mod_add(ll a, ll b, ll m = MOD){ return (a+b)%m; }
 ll mod_sub(ll a, ll b, ll m = MOD){ return ((a-b)%m + m) % m; }
+
 void _print(int x){cerr << x;}
 void _print(ll x){cerr << x;}
 void _print(ld x){cerr << x;}
 void _print(string x){cerr << x;}
 void _print(char x){cerr << x;}
 
-ll gcd(ll a, ll b){
-    while(b){
-        a %= b;
-        swap(a, b);
-    }
-    return a;
-}
+ll gcd(ll a, ll b){while(b){a %= b;swap(a, b);}return a;}
+ll lcm(ll a, ll b){return (a / gcd(a, b)) * b;}
+ll mod_pow(ll a, ll b){ll res = 1;a %= MOD;while(b){if(b & 1) res = (res * a) % MOD;a = (a * a) % MOD;b >>= 1;}return res;}
+ll mod_inv(ll a){return mod_pow(a, MOD - 2);}
 
-ll lcm(ll a, ll b){
-    return (a / gcd(a, b)) * b;
-}
+bool chmax(ll &a, ll b){if(b > a){a = b; return true;}return false;}
+bool chmin(ll &a, ll b){if(b < a){a = b; return true;}return false;}
+void read_vec(vi &v, int n){v.resize(n);for(int i = 0; i < n; i++) cin >> v[i];}
 
-ll mod_pow(ll a, ll b){
-    ll res = 1;
-    a %= MOD;
-    while(b){
-        if(b & 1) res = (res * a) % MOD;
-        a = (a * a) % MOD;
-        b >>= 1;
-    }
-    return res;
-}
-
-ll mod_inv(ll a){
-    return mod_pow(a, MOD - 2);
-}
-
-bool chmax(ll &a, ll b){
-    if(b > a){ a = b; return true; }
-    return false;
-}
-
-bool chmin(ll &a, ll b){
-    if(b < a){ a = b; return true; }
-    return false;
-}
-
-void read_vec(vi &v, int n){
-    v.resize(n);
-    for(int i = 0; i < n; i++) cin >> v[i];
-}
-
-void read_vec(vll &v, int n){
-    v.resize(n);
-    for(int i = 0; i < n; i++) cin >> v[i];
-}
 
 void solve(){
+    //Actual Solution here
 }
 
 int main(){
@@ -117,6 +82,7 @@ int main(){
     }
     return 0;
 }
+
 
 
 
